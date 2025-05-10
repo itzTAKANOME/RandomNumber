@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tebak Angka Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Tebak Angka Game</h1>
+
+        <!-- Player input section -->
+        <div id="player-section">
+            <label for="playerName">Masukkan nama Anda:</label>
+            <input type="text" id="playerName" placeholder="Nama Pemain" required>
+            <button id="startGame">Mulai Permainan</button>
+        </div>
+
+        <!-- Game section -->
+        <div id="game-section" style="display: none;">
+            <h2>Selamat datang, <span id="playerDisplayName"></span>!</h2>
+
+            <!-- Difficulty selection -->
+            <div>
+                <label for="difficulty">Pilih level kesulitan:</label>
+                <select id="difficulty">
+                    <option value="easy">Easy (1-100, 10 attempts)</option>
+                    <option value="medium">Medium (1-1000, 15 attempts)</option>
+                    <option value="hard">Hard (1-10000, 20 attempts)</option>
+                </select>
+                <button id="startRound">Mulai Permainan</button>
+            </div>
+
+            <!-- Game play -->
+            <div id="game-play" style="display: none;">
+                <h3>Guess the number!</h3>
+                <p>Anda memiliki <span id="attempts-left"></span> percobaan.</p>
+                <label for="guess">Masukkan tebakan Anda:</label>
+                <input type="number" id="guess" placeholder="Masukkan angka tebakan" required>
+                <button id="submitGuess">Kirim Tebakan</button>
+                <p id="message"></p>
+
+                <!-- Display guessed numbers -->
+                <p id="guessedNumbers">Angka yang sudah ditebak: </p>
+            </div>
+
+            <!-- Player progress -->
+            <div id="progress">
+                <h3>Progress:</h3>
+                <div id="progressDisplay"></div>
+                <button id="saveProgressBtn">Simpan Progress</button>
+                <button id="loadProgressBtn">Load Progress</button> <!-- Load progress button -->
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>

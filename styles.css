@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+#player-section {
+    text-align: center;
+}
+
+input[type="text"], input[type="number"], select {
+    padding: 10px;
+    margin: 10px 0;
+    width: 80%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#game-play {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#message {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #ff6347;
+}
+
+#progress {
+    margin-top: 20px;
+    text-align: left;
+}
+
+/* Add animation for the message "Tebakan Anda terlalu besar." */
+@keyframes shake {
+    0% { transform: scale(1); }
+    25% { transform: scale(1.1); }
+    50% { transform: scale(0.9); }
+    75% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.animate-message {
+    animation: shake 0.5s ease-in-out;
+    color: red;
+    font-weight: bold;
+}
